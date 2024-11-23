@@ -158,10 +158,11 @@ public class LevelLoader : MonoBehaviour
 
     private void ActiveScene(AsyncOperation asyncLoad)
     {
-        //Desativa a cena atual, de maneira ASync
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         //Carrega a nova
         asyncLoad.allowSceneActivation = true;
+        //Desativa a cena atual, de maneira ASync
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+     
     }
 
 }
